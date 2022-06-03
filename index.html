@@ -92,7 +92,7 @@
   }
   </style>
 </head>
-<body>
+<body onload="init()">
   <div id="top">
     <div class="skew left">
     <div class="unskew">
@@ -160,9 +160,8 @@
       <p>I made Pong this year (4/24/2022), <i>but I added a twist.</i><br />
         When you hit the ball while moving, it sends a curveball to the other player!<br />
       </p>
-      <div id="canvasDiv" onload="init()">  
+      <div id="canvasDiv">
         <canvas id="CanvasPong">Canvas doesn't appear to be working.</canvas>
-        <script src="Scripts/pongScript.js"></script>
       </div>
     </li>
     <li>
@@ -195,6 +194,6 @@
 </div>
 </li>
 </div>
-
+<script src="Scripts/pongScript.js"></script>
 </body>
 </html>
