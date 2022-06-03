@@ -55,8 +55,11 @@
                 canvas = document.getElementById("CanvasPong");
                 ctx = canvas.getContext("2d");
                 ctx.fillStyle = "black";
-                canvas.width = Math.max(window.innerWidth - 75, 1224);
-                canvas.height = Math.max((window.innerWidth * 750 / 1224) - 75, 576);
+
+                // USED TO BE "window.innerWidth" BUT IT'S NOW 1080
+
+                canvas.width = Math.max(1080 - 75, 1224);
+                canvas.height = Math.max((1080 * 750 / 1224) - 75, 576);
                 ctx.beginPath();
                 ctx.rect(0, 0, canvas.width, canvas.height);
                 ctx.fill();
@@ -215,8 +218,8 @@
             }
 
             function playerStop(keyup) {
+              if(["w", "s", "ArrowUp", "ArrowDown"].includes(keyup.key)){
                 keyup.preventDefault();
-
                 keyup.key === "w" ? player1.dir += 1 : null;
 
                 keyup.key === "s" ? player1.dir -= 1 : null;
@@ -227,9 +230,11 @@
 
                 player1.dir = Math.sign(player1.dir);
                 player2.dir = Math.sign(player2.dir);
+              }
             }
 
             function playerInfluence(keydown) {
+              if(["w", "s", "ArrowUp", "ArrowDown"].includes(keydown.key)){
                 keydown.preventDefault();
 
                 keydown.key === "w" ? player1.dir -= 1 : null;
@@ -242,6 +247,7 @@
 
                 player1.dir = Math.sign(player1.dir);
                 player2.dir = Math.sign(player2.dir);
+              }
             }
 
             function drawPlayer(x, y, size) {

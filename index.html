@@ -67,6 +67,10 @@
     width: 100%;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
   }
+  video{
+    width: 800px;
+    height: 800px;
+  }
   #Desk{
     width: 500px;
   }
@@ -112,10 +116,13 @@
 <div id="bottom">
   <h1>Things I have done:</h1>
   <ul>
-    <li><h3>Pong</h3></li>
+    <li onload="init()"><h3>Pong</h3>
 
+    <canvas id="CanvasPong">
+      <script src="PongScript.js"></script>
+    </li>
     <li>
-      <h3>An animation</h3>
+      <h3>One of my first animations</h3>
 
       <video controls>
         <source src="Videos/DD.mp4" type="video/mp4">
@@ -129,6 +136,7 @@
 <h1>Things I am working on:</h1>
   <ul>
     <li><h3>My Desk Setup</h3>
+      <p>Demo rendered in Blender<p>
       <br />
       <img id="Desk"src="Images/New_Desktop_Setup.gif">
     </li>
