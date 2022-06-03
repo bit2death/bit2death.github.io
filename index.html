@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Frederick Schmidt's Webpage</title>
+  <style>
+  body{
+    font-family: monospace arial;
+    background-color: #999;
+    color: #fff;
+    margin: 0;
+  }
+  /*
+  div, h1, h2, h3, p{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    border: 1px solid #777;
+    padding: 10px;
+  }
+  */
+  #top{
+    display: grid;
+    position: relative;
+    grid-template-columns: 50% 50%;
+    height: 800px;
+  }
+  #middle{
+    color: #0a0a0f;
+    background-color: #f0f0f0;
+    padding: 50px;
+  }
+  #bottom{
+    padding: 50px;
+    background-color: #3f3f5f;
+  }
+  .skew{
+    transform: skew(15deg, 0)
+  }
+  .unskew{
+    transform: skew(-15deg, 0);
+  }
+  .left{
+    display: flex;
+    background-color: #3f3f5f;
+    transform: skew(15deg, 0);
+    margin-left: -180px;
+    padding-left: 260px;
+    align-items: center;
+  }
+  #top .left{
+    animation-name: slide-in-left;
+    animation-timing-function: ease-out;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes slide-in-left{
+    0%{transform: translateX(-100%) skew(0deg);}
+    100%{transform: translateX(0) skew(15deg);}
+  }
+
+  #image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  }
+  </style>
+</head>
+<body onload="init()">
+  <div id="top">
+    <div class="skew left">
+    <div class="unskew">
+      <h1>Frederick Schmidt</h1>
+    </div>
+  </div>
+  <div id="image">
+    <img src="" alt="An image of Frederick Schmidt">(an image of fred)<br />(otherwise its a placeholder)
+  </div>
+</div>
+<div id="middle">
+<h1>Things Frederick is into:</h1>
+<ul>
+  <li>Blender
+    <ul>
+      <li>Animation</li>
+      <li>3d Modelling</li>
+      <li>CAD designing</li>
+    </ul>
+  </li>
+  <br />
+  <li>Programming
+    <ul>
+      <li>Javascript</li>
+      <li>HTML (not a programming language)</li>
+      <li>CSS (not a programming language)</li>
+      <li>Python</li>
+      <li>Some GDscript</li>
+    </ul>
+  </li>
+  <li>Making Video Games</li>
+  <li>Playing Video Games</li>
+  <li>Spending time with Friends</li>
+  <li>Cooking in general</li>
+  <li>Eating</li>
+</ul>
+
+</div>
+<!--
+<div id="bottom">
+  Things I have done:
+  <div id="PongDiv">
+    <h3>Pong but with Curveballs</h3>
+    <p>in order to use a curveball, you move into the ball.</p>
+    <canvas id="CanvasPong" height="100">
+    <script src="Scripts/pongScript.js"></script>
+    <br />
+    <h3>One of my First Animations:</h3>
+    <video width="1080" height="1080"controls autoplay>
+      <source src="Videos/DD.mp4"></source>
+      Your browser does not support MP4 Videos
+    </video>
+
+
+  </div>
+</div>
+-->
+
+</body>
+</html>
