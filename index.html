@@ -139,13 +139,16 @@
         You will need to press the Green Flag button twice if it looks broken when it opens up.<br />
         There's a lot of detail I put into this game in 8th grade.<br />
         The helmet is a little broken due to porting issues.<br />
+        <br />
+        Most of the instruction is done through game design, but I found that players forgot how to turn on or off the lantern.<br />
+        <b>You press "f" to toggle the lantern.</b><br /><br />
         The link: <a href="https://scratch.mit.edu/projects/369783555/">https://scratch.mit.edu/projects/369783555/</a>
         <br />
         I made it in 2019, in the spring
       </p>
       <iframe src="https://scratch.mit.edu/projects/369783555/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
     </li>
-    <li onload="init()">
+    <li>
       <h2>Pong</h2>
       <p>Controls:<br />
         W: 1st player Up<br />
@@ -154,11 +157,13 @@
         Down arrow: 2nd player Down<br />
       </p>
 
-        <p>I made Pong this year (4/24/2022), <i>but I added a twist.</i><br />
-          When you hit the ball while moving, it sends a curveball to the other player!<br />
-        </p>
-      <canvas id="CanvasPong" />
-      <script src="Scripts/pongScript.js"></script>
+      <p>I made Pong this year (4/24/2022), <i>but I added a twist.</i><br />
+        When you hit the ball while moving, it sends a curveball to the other player!<br />
+      </p>
+      <div id="canvasDiv" onload="init()">  
+        <canvas id="CanvasPong">Canvas doesn't appear to be working.</canvas>
+        <script src="Scripts/pongScript.js"></script>
+      </div>
     </li>
     <li>
       <h2>One of my first animations</h2>

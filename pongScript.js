@@ -50,7 +50,7 @@
             }
 
             function init() {
-
+                console.log("Pong Game Initialized!");
 
                 canvas = document.getElementById("CanvasPong");
                 ctx = canvas.getContext("2d");
