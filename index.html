@@ -5,7 +5,7 @@
   <title>Frederick Schmidt's Webpage</title>
   <style>
   body{
-    font-family: monospace arial;
+    font-family: monospace, sans-serif, Arial;
     background-color: #999;
     color: #fff;
     margin: 0;
@@ -24,11 +24,14 @@
     height: 800px;
   }
   #middle{
+    position: relative;
+    width: 100%;
     color: #0a0a0f;
     background-color: #f0f0f0;
     padding: 50px;
   }
   #bottom{
+    width: 100%;
     padding: 50px;
     background-color: #3f3f5f;
   }
@@ -77,6 +80,19 @@
     width: 970px;
     height: 840px;
   }
+  @media only screen and (max-width: 1920px){
+    #CanvasPong{
+    }
+  }
+  @media only screen and (max-width: 970px){
+    iframe{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   video{
     width: 800px;
     height: 800px;
@@ -91,8 +107,8 @@
     width: 500px;
   }
   #CanvasPong{
-    width: 1920px;
-    height: 1080px;
+    width: 960px;
+    height: 540px;
   }
   </style>
 </head>
@@ -146,11 +162,12 @@
         <br />
         Most of the instruction is done through game design, but I found that players forgot how to turn on or off the lantern.<br />
         <b>You press "f" to toggle the lantern.</b><br /><br />
+        <b>THIS DOES NOT WORK ON MOBILE, UNFORTUNATELY.</b><br /><br />
         The link: <a href="https://scratch.mit.edu/projects/369783555/">https://scratch.mit.edu/projects/369783555/</a>
         <br />
         I made it in 2019, in the spring
       </p>
-      <iframe src="https://scratch.mit.edu/projects/369783555/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe id="scratchGameiframe" src="https://scratch.mit.edu/projects/369783555/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
     </li>
     <li>
       <h2>Pong</h2>
