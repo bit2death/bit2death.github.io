@@ -50,13 +50,16 @@
             }
 
             function init() {
-
+                console.log("Pong Game Initialized!");
 
                 canvas = document.getElementById("CanvasPong");
                 ctx = canvas.getContext("2d");
                 ctx.fillStyle = "black";
-                canvas.width = Math.max(window.innerWidth - 75, 1224);
-                canvas.height = Math.max((window.innerWidth * 750 / 1224) - 75, 576);
+
+                // USED TO BE "window.innerWidth" BUT IT'S NOW 1080
+
+                canvas.width = 1920/4;// Math.max(window.innerWidth - 75, 1224);
+                canvas.height = 1080/4;// Math.max((window.innerWidth * 750 / 1224) - 75, 576);
                 ctx.beginPath();
                 ctx.rect(0, 0, canvas.width, canvas.height);
                 ctx.fill();
