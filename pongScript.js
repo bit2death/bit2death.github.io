@@ -58,8 +58,8 @@
 
                 // USED TO BE "window.innerWidth" BUT IT'S NOW 1080
 
-                canvas.width = 1920;// Math.max(window.innerWidth - 75, 1224);
-                canvas.height = 1080;// Math.max((window.innerWidth * 750 / 1224) - 75, 576);
+                canvas.width = 960;// Math.max(window.innerWidth - 75, 1224);
+                canvas.height = 540;// Math.max((window.innerWidth * 750 / 1224) - 75, 576);
                 ctx.beginPath();
                 ctx.rect(0, 0, canvas.width, canvas.height);
                 ctx.fill();
@@ -234,6 +234,7 @@
             }
 
             function playerInfluence(keydown) {
+
               if(["w", "s", "ArrowUp", "ArrowDown"].includes(keydown.key)){
                 keydown.preventDefault();
 
