@@ -58,8 +58,9 @@
 
                 // USED TO BE "window.innerWidth" BUT IT'S NOW 1080
 
-                canvas.width = 1920/4;// Math.max(window.innerWidth - 75, 1224);
-                canvas.height = 1080/4;// Math.max((window.innerWidth * 750 / 1224) - 75, 576);
+                canvas.width = 1920/2;// Math.max(window.innerWidth - 75, 1224);
+                canvas.height = 1080/2;// Math.max((window.innerWidth * 750 / 1224) - 75, 576);
+
                 ctx.beginPath();
                 ctx.rect(0, 0, canvas.width, canvas.height);
                 ctx.fill();
@@ -218,8 +219,10 @@
             }
 
             function playerStop(keyup) {
+
               if(["w", "s", "ArrowUp", "ArrowDown"].includes(keyup.key)){
                 keyup.preventDefault();
+
                 keyup.key === "w" ? player1.dir += 1 : null;
 
                 keyup.key === "s" ? player1.dir -= 1 : null;
@@ -234,7 +237,7 @@
             }
 
             function playerInfluence(keydown) {
-
+              console.log(keydown.key)
               if(["w", "s", "ArrowUp", "ArrowDown"].includes(keydown.key)){
                 keydown.preventDefault();
 
