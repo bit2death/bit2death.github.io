@@ -218,8 +218,8 @@
             }
 
             function playerStop(keyup) {
+              if(["w", "s", "ArrowUp", "ArrowDown"].includes(keyup.key)){
                 keyup.preventDefault();
-
                 keyup.key === "w" ? player1.dir += 1 : null;
 
                 keyup.key === "s" ? player1.dir -= 1 : null;
@@ -230,9 +230,12 @@
 
                 player1.dir = Math.sign(player1.dir);
                 player2.dir = Math.sign(player2.dir);
+              }
             }
 
             function playerInfluence(keydown) {
+
+              if(["w", "s", "ArrowUp", "ArrowDown"].includes(keydown.key)){
                 keydown.preventDefault();
 
                 keydown.key === "w" ? player1.dir -= 1 : null;
@@ -245,6 +248,7 @@
 
                 player1.dir = Math.sign(player1.dir);
                 player2.dir = Math.sign(player2.dir);
+              }
             }
 
             function drawPlayer(x, y, size) {
