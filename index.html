@@ -23,7 +23,18 @@ GNU GENERAL PUBLIC LICENSE
     </div>
   </div>
   <div id="image">
-    <img src="Images/mosquito.png" alt="Mosquito">
+    <canvas id="mosquitoImg" width="64" height="96">
+      <script>
+        var ctx = document.getElementById("mosquitoImg").getContext("2d");
+
+        var img = new Image();
+
+        img.onload = function() {
+          ctx.drawImage(img, 0, 0)
+        }
+        img.src = "Images/mosquito.png";
+
+      </script>
   </div>
 </div>
 <div id="middle">
