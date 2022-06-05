@@ -103,7 +103,7 @@ h2{
   width: 50%;
 }
 canvas {
-  width: 50%;
+  width: 40%;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
