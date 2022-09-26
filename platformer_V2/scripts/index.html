@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <style>
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: monospace, arial;
+            justify-content: center;
+            background-color: #002c34;
+            align-items:center;
+            color: #ffffff;
+        }
+
+        header{
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin-bottom: 50px;
+        }
+
+        footer{
+            bottom: 0;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .5)
+        }
+
+        #canvas {
+            background-color: #000;
+            font-smooth: never;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: contain;
+            -webkit-font-smoothing: none;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-pixelated;
+            image-rendering: pixelated;
+        }
+
+        #uiContainer {
+            position:static;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 5px 5px 20px rgba(0, 0, 20, .5);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, .7);
+        }
+
+    </style>
+    </head>
+    <body>
+        <header>
+            <img src="#">
+        </header>
+
+        <div id="uiContainer">
+                <canvas tabindex="1" id="canvas"></canvas>
+
+        </div>
+        <p>
+            Press "/" to enter/exit fullscreen<br /><br />
+            Version 2.0
+        </p>
+
+        <footer style="display: none">
+            <p>Javascript format by <a href="https://www.youtube.com/c/Frankslaboratory">Franks Labratory</a> on Youtube</p>
+            <p><a target="_blank"href="https://www.youtube.com/watch?v=EvC3ge_puQk&t=1805s">The Video in Question</a></p>
+        </footer>
+        <script src="Game.js" defer></script>
+    </body>
+</html>
