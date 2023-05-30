@@ -2,11 +2,16 @@
     {
         "name" : "Cave Game (Scratch)",
         "href" : "https://scratch.mit.edu/projects/369783555/",
-        "src"  : ""
+        "src"  : "https://cdn2.scratch.mit.edu/get_image/project/369783555_480x360.png"
     },
     {
         "name" : "Pong",
-        "href" : "",
-        "src"  : ""
+        "href" : "./demos/pong/index.html",
+        "src"  : "./demos/pong/thumb.png"
+    },
+    {
+        "name": "First Animation",
+        "href": "./demos/firstAnim/index.html",
+        "src": ".demos/firstAnim/thunb.png"
     }
 ]

@@ -1,6 +1,9 @@
 "use strict";
 async function getJsonDemos(){
-    const response = await fetch("./demos/demos.json");
+    const response = await fetch("./demos/demos.json").
+    catch(e => {
+        console.log(e)
+    });
     const jsonData = await response.json();
     await jsonData.forEach(e => {
         createProjItem(e)
