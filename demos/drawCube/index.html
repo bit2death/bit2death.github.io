@@ -1,0 +1,39 @@
+<!dOcTyPe HTML>
+<html>
+  <head>
+    <title>
+      3d wireframe renderer 1.0
+    </title>
+    <style>
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    canvas{
+      background-color: #0000;
+      filter: drop-shadow(0 0 .5vw #0ff) drop-shadow(0 0 3vw #0ff8);
+      width: 1080px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <canvas id="canvas">canvas not working :(</canvas>
+
+    <select id="catalog">
+    </select>
+    <p>Move your mouse to rotate the model!<br/>
+      (This is very limited in rotation, I don't understand the math very well yet as of 6/7/2023)
+      If it shows "ERR" then either it's loading (shouldn't take more than a few seconds) or it can't get the models</p>
+    <div style="background-color: #FFF; color: #000;">
+      Credits:<br/><br/>
+      <a href="https://www.blender.org/">Blender</a><br/>
+      <a href="https://replit.com/talk/learn/3D-graphics-a-beginners-mind/7909">displaying 3d</a><br/>
+      <a href="https://blender.stackexchange.com/questions/110780/script-to-output-vertex-coordinates-and-triangles">Blender scripting</a> <br/>(I had to replace the first * with @ for vector multiplication)
+    </div>
+    <footer>
+      Fred Schmidt 
+    </footer>
+      <script src="script.js"></script>
+  </body>
+</html>

@@ -12,6 +12,11 @@
     {
         "name": "First Animation",
         "href": "./demos/firstAnim/index.html",
-        "src": ".demos/firstAnim/thunb.png"
+        "src": ".demos/firstAnim/thumb.png"
+    },
+    {
+        "name": "3d models",
+        "href": "./demos/drawCube/index.html",
+        "src": ".demos/drawCube/thumb.png"
     }
 ]
