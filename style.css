@@ -16,6 +16,8 @@ html{
 }
 
 body{
+  background-color: #7092BE;
+  background-image: repeating-linear-gradient(45deg,#222d75,#222d75 2px, #3d4787 2px,#3d4787 20px);
   color: #000;
   margin: 0;
   width: 100%;
@@ -31,7 +33,7 @@ body{
   border: 2px solid black;
   border-radius: 10px;
   padding: 50px;
-  background-color: #dbce8d;
+  background-color: #dbc08d;
   max-width: 1500px;
   width: max-content;
 }
@@ -57,41 +59,47 @@ header div{
 }
 
 #tabBar{
-  border: 0;
   display: flex;
   flex-direction: row;
-  box-shadow: 0px 0px 10px #0005;
+  filter: drop-shadow(0 0 2px#000a);
   width: max-content;
+}
+
+#tabBar button{
+  border-radius: 20px 20px 0 0;
+  padding: 10px;
+  margin: 0;
+  user-select: none;
 }
 
 #tabBar button:hover{
   animation-timing-function:ease-out;
-  animation-name: popOut;
+  animation-name: hover;
   animation-duration: .1s;
   transform:scale(1.05);
   box-shadow: 0px 0px 10px #0055;
 }
 
-@keyframes popOut{
+@keyframes hover{
   0%{
-    transform:scale(1);
+    transform:scale(1, 1);
     box-shadow: 0px 0px 0px #0055;
   }
   100%{
-    transform:scale(1.05);
+    transform:scale(1, 1.2);
     box-shadow: 0px 0px 10px #0055;
   }
 }
 
 #tabBar button:active, #tabBar button.active{
   animation-timing-function:ease-out;
-  animation-name: popIn;
+  animation-name: click;
   animation-duration: .15s;
   box-shadow: 0px 0px 5px #0055 inset;
   filter:brightness(.9);
 }
 
-@keyframes popIn{
+@keyframes click{
   0%{
     filter:brightness(2);
     transform:scaleX(1.5) scaleY(.75);
@@ -107,12 +115,6 @@ header div{
   }
 }
 
-#tabBar button{
-  border: 2px solid black;
-  padding: 10px;
-  margin: 0;
-  user-select: none;
-}
 
 img{
   width: 100%;
@@ -137,14 +139,11 @@ canvas {
   filter:drop-shadow(0 0 10px #0088);
 }
 
-#projects, #aboutMe , body{
-  background-color: #7092BE;
-  background-image: repeating-linear-gradient(45deg,#222d75,#222d75 2px, #3d4787 2px,#3d4787 20px);
-}
 #projects, #aboutMe{
+  background-image: repeating-linear-gradient(45deg,#b99052,#b99052 2px, #a57a42 2px,#a57a42 20px);
   padding: 20px;
   border: 2px solid black;
-  box-shadow: 0px 0px 40px #0088 inset;
+  box-shadow: 0px 0px 40px #583500 inset;
   border-radius: 0 10px 10px 10px;
 }
 .projImg{
@@ -187,17 +186,23 @@ canvas {
 }
 
 footer:hover{
-  background: #000a;
+  background: #0006;
 }
 
 footer{
-  margin: 20px;
+  text-align: center;
+  margin: 20px 20px 10px 20px;
   color: #fff;
   background: #0004;
   padding: 20px;
-  user-select: none;
 }
 
 footer p{
+  margin: 0;
+}
+footer a{
+  text-decoration: underline;
+  font-size: 10px;
+  color: #fff;
   margin: 0;
 }

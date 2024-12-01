@@ -61,25 +61,27 @@ var TRIANGLES = [
   [31, 30, 40, 39, 38, 37, 27, 28, 36, 35, 41, 34, 33, 32]
 ];
 
+// LOADING RESOURCES ------------------------------------------------------
+
+window.onload = function(){
+  document.getElementById("catalog").addEventListener("change", (e) => {
+    getMeshData(e.target.options[e.target.selectedIndex].value)
+    alert(e.target.options[e.target.selectedIndex].value)
+  })
+  loadCatalog();
+}
+
 async function getMeshData(mesh){
   const response = await fetch(`./models/${mesh}.json`);
   const jsonData = await response.json();
   VERTEXES = jsonData[0];
   TRIANGLES = jsonData[1];
-  console.log(jsonData)
+  console.log(jsonData);
 }
-getMeshData("suzanne")
-
-
-window.onload = function(){
-  document.getElementById("catalog").addEventListener("change", (e) => {
-    getMeshData(e.target.options[e.target.selectedIndex].value)
-  })
-  loadCatalog();
-}
+getMeshData("suzanne");
 
 async function loadCatalog(){
-  const response = await fetch(`./models/_index.json`)
+  const response = await fetch(`https://bit2death.github.io/demos/drawCube/models/_index.json`);
   const jsonData = await response.json();
 
   jsonData.forEach(e => {
@@ -87,9 +89,10 @@ async function loadCatalog(){
     temp.value = e
     temp.innerHTML = e
     document.getElementById("catalog").appendChild(temp)
-  })
-  
+  }) 
 }
+
+// THE ACTUAL 3D PART!!!!! ------------------------------------------------
 
 var canvas = document.getElementById("canvas");
 canvas.width = Math.min(window.innerWidth, 700);

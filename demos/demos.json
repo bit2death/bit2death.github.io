@@ -18,5 +18,20 @@
         "name": "3d models",
         "href": "./demos/drawCube/index.html",
         "src" : "./demos/drawCube/thumb.png"
+    },
+    {
+        "name": "Blueberry Jam",
+        "href": "https://github.com/bit2death/Blueberry-Jam-Godot-/tree/main",
+        "src" : "./demos/blueberryJam/icon.png"
+    },
+    {
+        "name": "Kraken-a-Catch",
+        "href": "https://itch.io/jam/dnd-jam-2024/rate/3006665",
+        "src" : "https://img.itch.zone/aW1nLzE3OTgwNTQzLnBuZw==/315x250%23c/6J1Kpi.png"
+    },
+    {
+        "name": "I scream for Ice Cream",
+        "href": "https://redgreengo.itch.io/i-scream-for-ice-cream",
+        "src" : "https://img.itch.zone/aW1hZ2UvMzA4NTAyOS8xODQ1MDM0OS5wbmc=/347x500/gcehny.png"
     }
 ]
